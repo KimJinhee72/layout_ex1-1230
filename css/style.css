@@ -1,1 +1,137 @@
 @charset "utf-8";
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+ul, li{
+    list-style: none;
+}
+a{
+    color: #333;
+    text-decoration: none;
+}
+.container{
+    width: 1200px; 
+    height: 1000px;
+    background-color: antiquewhite;
+    margin: auto;
+}
+/* 상단 */
+header{
+    width: 100%;
+    height: 100px;
+    background-color: #045;
+}
+.logo{
+    width: 300px;
+    float: left;
+    background-color: aqua;
+    line-height: 100px;
+    text-align: center;
+}
+/* 로고 */
+.logo h1{
+    font-size: 40px;
+    color: #fff;
+    /* 글자 선택하고 sans- 늘 써져있음 모든 글자반영 */
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+/* 메뉴 */
+nav{
+    /* 밑에 자식이 변경하려면 부모는 position: relative;로 정해야함 */
+    position: relative;
+    width: 900px;
+    height: 100%;
+    float: right;
+    background-color: rgb(166, 235, 196);
+}
+/* ul임 */
+#topMenu{
+    /*  부모는 position: relative;해주고 position absolute는 top:0 left:0 or right:0 해줘야함 */
+    position: absolute;
+    top: 0;
+    right: 5px;
+    width: calc(100% - 100px);
+    height: 60px;
+    margin-top: 40px;
+    background-color: rgb(240, 240, 91);
+}
+/* 글자색은 a를 적용해서 한꺼번에 쓰기 좋음 아니면 따로 :hover a  */
+#topMenu li a{
+    /* float 해놓고 width 값을 4등분 하니 알아서 나뉨 */
+    width: calc(100% / 4);
+    /* height: 100%;    
+    /* 글자 중간정렬 */
+    text-align: center;
+    line-height: 60px;
+    font-size: 20px;
+    font-weight: bold;
+    /* float는 인라인블럭이 되어 너비 높이를 줄수 있음 만약 주지 않으면 
+    그냥 인라인 요소로 사용됨*/    
+    float: left;
+    background-color: rgb(154, 225, 243);
+}
+#topMenu li:hover{
+    background-color: rgb(243, 235, 120);
+}
+/* 글자 색은가 li적용 안되어 a를 찍어 줘야함*/
+/* #topMenu li:hover a{ 
+    color: red;
+ } */
+/* 메인 */
+/* .main_top {
+    position: relative;    
+    margin : 5% 10%;
+    background-color: rgb(255, 205, 253);
+}
+.img_area{
+    position: absolute;
+}
+.main_top h1{
+ font-size: 20px;
+} */
+.contents{
+    width: 100%;
+    height: 800px;
+    border-color: aquamarine;
+}
+ /* 힐링영역 */
+.healing{
+    width: 100%;
+    height: calc( 100% / 2);
+    background-color: rgb(126, 4, 148);
+}
+.healing h2{
+    background-color: rgb(244, 183, 91);
+}
+.decription{
+    width: 100%;
+    height: 300px;
+}
+.dec-img{
+    float: left;
+    width: 450px;
+    height: 100%;
+    background-color: rgb(248, 164, 187);
+}
+.dec-detail{
+    float: left;
+    width: calc(100% - 450px);
+    height: 100%;
+    background-color: aqua;
+}
+.detail-top {
+    height: calc(100% / 2);
+    background-color: chartreuse;
+}
+.detial-bottom {
+    height: calc(100% / 2);
+    background-color: rgb(46, 79, 13);
+}
+
+.activity{
+    height: calc( 100% / 2);
+    background-color: rgb(240, 147, 240);
+}
+/* 하단 */
